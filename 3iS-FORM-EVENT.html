@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(to right, #ffffff 0%, #fefefe 100%);
+  font-size: 12px;
+}
+
+body, button, input {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+  background: #3e3e3e;
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: #999;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #ffffff;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: #ffffff;
+}
+
+.app-contact {
+  margin-top: auto;
+  font-size: 8px;
+  color: #888;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+  color: #666;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.app-form-button:hover {
+  color: #b9134f;
+}
+
+.credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: #ffa4bd;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.credits-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dribbble {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 520px) {
+  .screen-body {
+    flex-direction: column;
+  }
+
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .app-title {
+    flex-direction: row;
+  }
+
+  .app-title span {
+    margin-right: 12px;
+  }
+
+  .app-title:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .screen-body {
+    padding: 40px;
+  }
+
+  .screen-body-item {
+    padding: 0;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="background">
+  <div class="container">
+    <div class="screen">
+      <div class="screen-header">
+        <div class="screen-header-left">
+          <div class="screen-header-button close"></div>
+          <div class="screen-header-button maximize"></div>
+          <div class="screen-header-button minimize"></div>
+        </div>
+        <div class="screen-header-right">
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+        </div>
+      </div>
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span>3iS / Uprizon</span>
+            <span>TEST<br>EVENT</span>
+          </div>
+        </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+          	<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+          	<input type=hidden name="oid" value="00D7Q000004Rl6n">
+          	<input type=hidden name="retURL" value="https://julienuprizon.github.io/3iS/3iS-FORM-JPO.html">
+            <div class="app-form-group">
+              <input id="first_name" name="first_name" type="text" class="app-form-control" placeholder="Prénom">
+            </div>
+            <div class="app-form-group">
+              <input id="last_name" name="last_name" type="text" class="app-form-control" placeholder="Nom">
+            </div>
+            <div class="app-form-group">
+              <input id="email" name="email" type="email" class="app-form-control" placeholder="Email">
+            </div>
+            <div class="app-form-group">
+              <input id="mobile" name="mobile" type="text" class="app-form-control" placeholder="Numéro de Téléphone">
+            </div>
+            <div class="app-form-group">
+              	<span class="app-form-control">Intérêt pour le campus</span><br>
+              	<select  id="techInteretPourCampus__c" name="techInteretPourCampus__c" title="Intérêt pour le campus">
+              		<option value="0017Q00000EdMguQAF">3iS Paris</option>
+              		<option value="0017Q00000EdMgzQAF">3iS Bordeaux</option>
+              		<option value="0017Q00000EdMh4QAF">3iS Lyon</option>
+              		<option value="0017Q00000EdMhEQAV">3iS Nantes</option>
+              		<option value="0017Q00000HKeE3QAL">3iS International</option>
+              	</select>
+            </div>
+             <div class="app-form-group">
+              	<span class="app-form-control">Intérêt pour l'univers</span><br>
+              	<select  id="InteretPourUnivers__c" name="InteretPourUnivers__c" title="Intérêt pour l'univers'">
+              		<option value="Acting">Acting</option>
+              		<option value="Cinéma & audiovisuel">Cinéma & audiovisuel</option>
+              		<option value="Cinéma animation">Cinéma animation</option>
+              		<option value="Effets spéciaux">Effets spéciaux</option>
+              		<option value="International">International</option>
+              		<option value="Jeu vidéo">Jeu vidéo</option>
+              		<option value="Son">Son</option>
+              		<option value="Spectacle vivant">Spectacle vivant</option>
+              	</select>
+            </div>
+            <div class="app-form-group">
+            	<span class="app-form-control">Niveau d'étude</span><br>
+            	<select  id="hed__Highest_Degree_Earned__c" name="hed__Highest_Degree_Earned__c" title="Highest Degree Earned" >
+            		<option value="Terminale">Terminale</option>
+            		<option value="Brevet">Brevet</option>
+            		<option value="CAP">CAP</option>
+            		<option value="BEP">BEP</option>
+            		<option value="Seconde">Seconde</option>
+            		<option value="Première">Première</option>
+            		<option value="Bac">Bac</option>
+            		<option value="Bac +">Bac +</option>
+            	</select>
+            </div>
+            <div class="app-form-group">
+            	<span class="app-form-control">Situation actuelle</span><br>
+            	<select  id="ActualStatus__c" name="ActualStatus__c" title="Statut actuel">
+            		<option value="Etudiant">Etudiant</option>
+            		<option value="Demandeur d&#39;emploi">Demandeur d&#39;emploi</option>
+            		<option value="Intermittent">Intermittent</option>
+            		<option value="Salarié">Salarié</option>
+            	</select>
+            </div>
+            <div class="app-form-group">
+            	<span class="app-form-control">Campagne</span><br>
+            	<select  id="techCampagnId__c" name="techCampagnId__c" title="Campaign">
+            		<!-- AJOUTER ICI LES CAMPAGNES SFDC-->
+            		<option value="7017Q000000PlKgQAK">Salon Ponctuel Sept 2022</option>
+            		<option value="KEY">EVENT</option>
+            		<option value="KEY">EVENT</option>
+            		<option value="KEY">EVENT</option>
+            	</select>
+            </div>
+            <div class="app-form-group">
+            	<span class="app-form-control">Type de formation</span><br>
+            	<select  id="hed__Preferred_Teaching_Format__c" name="hed__Preferred_Teaching_Format__c" title="hed__Preferred_Teaching_Format__c">
+            		<option value="Formation initiale">Formation initiale</option>
+	           		<option value="Formation continue">Formation continue</option>
+            	</select>
+            </div>
+            <div class="app-form-group">
+            	<span class="app-form-control">Email Opt In</span><br>
+            	<input type="checkbox" id="HasOptedInOfEmail__c" name="HasOptedInOfEmail__c" value="true" checked>
+            </div>
+            <div class="app-form-group">
+            	<span class="app-form-control">Mobile Opt In</span><br>
+            	<input type="checkbox" id="HasOptedInOfMobile__c" name="HasOptedInOfMobile__c" value="true" checked>
+            </div>
+            <div class="app-form-group buttons">
+              <input class="app-form-button" type="submit" name="submit">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
