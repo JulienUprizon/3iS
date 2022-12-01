@@ -268,8 +268,14 @@ body, button, input {
         </div>
         <div class="screen-body-item">
           <div class="app-form">
+          <!-- PROD
           	<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
           	<input type=hidden name="oid" value="00D7Q000004Rl6n">
+          -->
+          <!-- PARTIAL -->
+          	<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+          	<input type=hidden name="oid" value="00D0D0000008dNN">
+          <!-- FIN PARTIAL -->
           	<input type=hidden name="retURL" value="https://julienuprizon.github.io/3iS/3iS-FORM-CANDIDATURE.html">
             <div class="app-form-group">
               <input id="first_name" name="first_name" type="text" class="app-form-control" placeholder="Prénom">
