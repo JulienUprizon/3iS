@@ -245,16 +245,13 @@ body, button, input {
 
 <div class="background">
   <div class="container">
+  
   	<p>
   	Ce formulaire simule la candidature individuelle à une formation continue courte<br>
   	Attentes :<br>
   	- Création du contact et de la formation courte choisie.<br>
   	</p>
-</div>
-
-
-<div class="background">
-  <div class="container">
+  
     <div class="screen">
       <div class="screen-header">
         <div class="screen-header-left">
@@ -278,8 +275,8 @@ body, button, input {
         <div class="screen-body-item">
           <div class="app-form">
           	<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-          	<input type=hidden name="oid" value="00D7Q000004Rl6n">
-          	<input type=hidden name="retURL" value="https://julienuprizon.github.io/3iS/3iS-FORM-CANDIDATURE.html">
+          	<input type=hidden name="oid" value="00D0D0000008dNN">
+          	<input type=hidden name="retURL" value="">
             <div class="app-form-group">
               <input id="first_name" name="first_name" type="text" class="app-form-control" placeholder="Prénom">
             </div>
@@ -307,9 +304,9 @@ body, button, input {
             <div class="app-form-group">
             	<span class="app-form-control">Type de formation</span><br>
             	<select  id="hed__Preferred_Teaching_Format__c" name="hed__Preferred_Teaching_Format__c" title="hed__Preferred_Teaching_Format__c">
+	           		<option value="Formation continue - courte">Formation continue - courte</option>
             		<option value="Formation initiale">Formation initiale</option>
 	           		<option value="Formation continue">Formation continue</option>
-	           		<option value="Formation continue - courte">Formation continue - courte</option>
 	           		<option value="Formation continue - longue">Formation continue - longue</option>
 					<option value="Formation en alternance">Formation en alternance</option>
             	</select>
@@ -317,14 +314,14 @@ body, button, input {
             <div class="app-form-group">
             	<span class="app-form-control">Choix de la formation</span><br>
             	<select  id="ChoixFormation__c" name="ChoixFormation__c" title="ChoixFormation__c">
-            		<option value="TBD">TBD</option>
+            		<option value="a0R0D0000024qOJUAY">Test Formation Courte</option>
 	           		<option value="TBD">TBD</option>
             	</select>
             </div>
             <div class="app-form-group">
             	<span class="app-form-control">Choix de la session</span><br>
             	<select  id="ChoixSession__c" name="ChoixSession__c" title="ChoixSession__c">
-            		<option value="TBD">TBD</option>
+            		<option value="a110D000001oxrEQAQ">Session 1 - 14/11</option>
 	           		<option value="TBD">TBD</option>
             	</select>
             </div>
