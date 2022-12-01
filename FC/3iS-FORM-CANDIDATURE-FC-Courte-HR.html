@@ -247,7 +247,7 @@ body, button, input {
   <div class="container">
   
   	<p>
-  	Ce formulaire simule la candidature individuelle à une formation continue courte<br>
+  	Ce formulaire simule la candidature d'un Responsable RH à une formation continue courte pour ses <br>
   	Attentes :<br>
   	- Création du contact et de la formation courte choisie.<br>
   	</p>
@@ -276,7 +276,7 @@ body, button, input {
           <div class="app-form">
           	<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
           	<input type=hidden name="oid" value="00D0D0000008dNN">
-			<input type=hidden name="retURL" value="http://">
+			<input type=hidden name="retURL" value="https://julienuprizon.github.io/3iS/FC/3iS-FORM-CANDIDATURE-FC-Courte-HR.html">
             <div class="app-form-group">
               <input id="first_name" name="first_name" type="text" class="app-form-control" placeholder="Prénom">
             </div>
@@ -336,6 +336,10 @@ body, button, input {
             	<span class="app-form-control">Candidature</span><br>
             	<input type="checkbox" id="Candidature__c" name="Candidature__c" value="true" checked>
             </div>
+            <div class="app-form-group">
+            	<span class="app-form-control">Candidature</span><br>
+            	<input type="checkbox" id="CandidatureRH__c" name="CandidatureRH__c" value="true" checked>
+            </div>            
             <div class="app-form-group">
             	<span class="app-form-control">Email Opt In</span><br>
             	<input type="checkbox" id="HasOptedInOfEmail__c" name="HasOptedInOfEmail__c" value="true" checked>

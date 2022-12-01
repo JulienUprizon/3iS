@@ -276,7 +276,7 @@ body, button, input {
           <div class="app-form">
           	<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
           	<input type=hidden name="oid" value="00D0D0000008dNN">
-			<input type=hidden name="retURL" value="http://">
+			<input type=hidden name="retURL" value="https://julienuprizon.github.io/3iS/FC/3iS-FORM-CANDIDATURE-FC-Courte-ELEVE.html">
             <div class="app-form-group">
               <input id="first_name" name="first_name" type="text" class="app-form-control" placeholder="Prénom">
             </div>
@@ -311,6 +311,7 @@ body, button, input {
 					<option value="Formation en alternance">Formation en alternance</option>
             	</select>
             </div>
+            <!--
             <div class="app-form-group">
             	<span class="app-form-control">Choix de la formation</span><br>
             	<select  id="ChoixFormation__c" name="ChoixFormation__c" title="ChoixFormation__c">
@@ -325,6 +326,7 @@ body, button, input {
 	           		<option value="TBD">TBD</option>
             	</select>
             </div>
+            -->
             <div class="app-form-group">
             	<span class="app-form-control">Présentiel / Distanciel ?</span><br>
             	<select  id="PresentielDistanciel__c" name="PresentielDistanciel__c" title="PresentielDistanciel__c">
@@ -335,6 +337,13 @@ body, button, input {
             <div class="app-form-group">
             	<span class="app-form-control">Candidature</span><br>
             	<input type="checkbox" id="Candidature__c" name="Candidature__c" value="true" checked>
+            </div>
+			<div class="app-form-group">
+              <input id="CandidatureRHID__c" name="CandidatureRHID__c" type="text" class="app-form-control" placeholder="CandidatureRHID__c">
+            </div>
+            <div class="app-form-group">
+            	<span class="app-form-control">EleveRH__c</span><br>
+            	<input type="checkbox" id="EleveRH__c" name="EleveRH__c" value="true" checked>
             </div>
             <div class="app-form-group">
             	<span class="app-form-control">Email Opt In</span><br>
