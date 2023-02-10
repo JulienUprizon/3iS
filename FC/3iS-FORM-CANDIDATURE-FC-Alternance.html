@@ -239,7 +239,6 @@ body, button, input {
 }
 
 </style>
-
 </head>
 <body>
 
@@ -287,7 +286,14 @@ body, button, input {
             <input type=hidden name="oid" value="00D1q0000000N9n">
             <!-- FIN DEVCHARBEL-->
 			<input type=hidden name="retURL" value="https://julienuprizon.github.io/3iS/FC/3iS-FORM-CANDIDATURE-FC-Alternance.html">
-             <div class="app-form-group">
+
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--
+<input type="hidden" name="debug" value=1>
+<input type="hidden" name="debugEmail" value="julien.brulland+devcharbel@uprizon.com">
+-->
+            <div class="app-form-group">
             	<span class="app-form-control">Civilité</span><br>
             	<select  id="Salutation" name="Salutation" title="Salutation">
             		<option value="Monsieur">Monsieur</option>
@@ -319,6 +325,7 @@ body, button, input {
             <div class="app-form-group">
               	<span class="app-form-control">Campus</span><br>
               	<select  id="techInteretPourCampus__c" name="techInteretPourCampus__c" title="Intérêt pour le campus">
+              		<option value="0011q00001CX4SrAAL">3iS Paris (DevCharbel)</option>
               		<option value="0017Q00000EdMguQAF">3iS Paris</option>
               		<option value="0017Q00000EdMgzQAF">3iS Bordeaux</option>
               		<option value="0017Q00000EdMh4QAF">3iS Lyon</option>
