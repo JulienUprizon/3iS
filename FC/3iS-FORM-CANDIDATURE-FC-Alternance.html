@@ -247,9 +247,9 @@ body, button, input {
   <div class="container">
   
   	<p>
-  	Ce formulaire simule la candidature individuelle à une formation continue courte<br>
+  	Ce formulaire simule la candidature à une formation en alternance<br>
   	Attentes :<br>
-  	- Création du contact et de la formation courte choisie.<br>
+  	- Création du contact et de la candidature sur la formation en alternance choisie.<br>
   	</p>
   
     <div class="screen">
@@ -269,7 +269,7 @@ body, button, input {
         <div class="screen-body-item left">
           <div class="app-title">
             <span>3iS / Uprizon</span>
-            <span>TEST<br>CANDIDATURE<br>FC Courte</span>
+            <span>TEST<br>CANDIDATURE<br>Alternance</span>
           </div>
         </div>
         <div class="screen-body-item">
@@ -326,11 +326,11 @@ body, button, input {
             <div class="app-form-group">
             	<span class="app-form-control">Type de formation</span><br>
             	<select  id="hed__Preferred_Teaching_Format__c" name="hed__Preferred_Teaching_Format__c" title="hed__Preferred_Teaching_Format__c">
+					<option value="Formation en alternance">Formation en alternance</option>
 	           		<option value="Formation continue - courte">Formation continue - courte</option>
             		<option value="Formation initiale">Formation initiale</option>
 	           		<option value="Formation continue">Formation continue</option>
 	           		<option value="Formation continue - longue">Formation continue - longue</option>
-					<option value="Formation en alternance">Formation en alternance</option>
             	</select>
             </div>
             <div class="app-form-group">
@@ -349,6 +349,7 @@ body, button, input {
             		<option value="TBD">TBD</option>
             	</select>
             </div>
+            <!--
             <div class="app-form-group">
             	<span class="app-form-control">Présentiel / Distanciel ?</span><br>
             	<select  id="PresentielDistanciel__c" name="PresentielDistanciel__c" title="PresentielDistanciel__c">
@@ -356,6 +357,7 @@ body, button, input {
 	           		<option value="Distanciel">Distanciel</option>
             	</select>
             </div>
+            -->
             <div class="app-form-group">
             	<span class="app-form-control">Candidature</span><br>
             	<input type="checkbox" id="Candidature__c" name="Candidature__c" value="true" checked>
