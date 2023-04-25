@@ -274,15 +274,23 @@ body, button, input {
         </div>
         <div class="screen-body-item">
           <div class="app-form">
-          	<!-- PROD -->
+          	<!-- PROD
           	<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
           	<input type=hidden name="oid" value="00D7Q000004Rl6n">
          	<!-- FIN PROD-->
-          	<!-- PARTIAL 26/01/2023
+          	<!-- PARTIAL 24/03/2023
           	<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-          	<input type=hidden name="oid" value="00D7Y000000BEdd">
+          	<input type=hidden name="oid" value="00DMU0000008hNn">
             <!-- FIN PARTIAL -->
-			<input type=hidden name="retURL" value="https://julienuprizon.github.io/3iS/FC/3iS-FORM-CANDIDATURE-FC-Courte-IND.html">
+            <!-- DEVCHARBEL 10/02/2023 -->
+            <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <input type=hidden name="oid" value="00D1q0000000N9n">
+            <!-- FIN DEVCHARBEL-->
+            <!-- DEVHOUDA 24/02/2023
+            <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <input type=hidden name="oid" value="00D1q0000008iwD">
+            <!-- FIN DEVHOUDA-->
+			<input type=hidden name="retURL" value="https://julienuprizon.github.io/3iS/FC/3iS-FORM-CANDIDATURE-FC-Alternance.html">
 
 <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
 <!--  these lines if you wish to test in debug mode.                          -->
@@ -347,14 +355,15 @@ body, button, input {
             	<select  id="ChoixFormation__c" name="ChoixFormation__c" title="ChoixFormation__c">
 	           		<option value="a0R7Q00000SISbcUAH">Formation Continue Courte A (PROD)</option>
 	           		<option value="a0R7Q00000SISbcUAH">Formation Continue Courte A (PARTIAL)</option>
-            		<option value="">TBD</option>
+            		<option value="a0R1q000006na8VEAQ">Formation Continue Courte A (DevCharbel)</option>
             	</select>
             </div>
             <div class="app-form-group">
             	<span class="app-form-control">Choix de la session</span><br>
             	<select  id="ChoixSession__c" name="ChoixSession__c" title="ChoixSession__c">
 	           		<option value="a137Q000000Y3ykQAC">Session FCC A - 1 (PROD)</option>
-	           		<option value="a137Y000004jPqeQAE">Session Formation A (PARTIAL)</option>
+	           		<option value="a13MU0000008OaJYAU">Session Formation A (PARTIAL)</option>
+	           		<option value="a131q000008JYgMAAW">Session FCC A - 1 (DevCharbel)</option>
             		<option value="">INTRA</option>
             	</select>
             </div>

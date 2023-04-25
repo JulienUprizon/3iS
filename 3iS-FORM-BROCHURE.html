@@ -267,9 +267,30 @@ body, button, input {
         </div>
         <div class="screen-body-item">
           <div class="app-form">
+          	<!-- PROD
           	<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
           	<input type=hidden name="oid" value="00D7Q000004Rl6n">
-          	<input type=hidden name="retURL" value="https://julienuprizon.github.io/3iS/3iS-FORM-BROCHURE.html">
+         	<!-- FIN PROD-->
+          	<!-- PARTIAL 24/03/2023 -->
+          	<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+          	<input type=hidden name="oid" value="00DMU0000008hNn">
+            <!-- FIN PARTIAL -->
+            <!-- DEVCHARBEL 10/02/2023
+            <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <input type=hidden name="oid" value="00D1q0000000N9n">
+            FIN DEVCHARBEL-->
+            <!-- DEVHOUDA 24/02/2023
+            <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <input type=hidden name="oid" value="00D1q0000008iwD">
+            <!-- FIN DEVHOUDA-->
+			<input type=hidden name="retURL" value="https://julienuprizon.github.io/3iS/3iS-FORM-BROCHURE.html">
+
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!-- -->
+<input type="hidden" name="debug" value=1>
+<input type="hidden" name="debugEmail" value="julien.brulland+debug@uprizon.com">
+          	
             <div class="app-form-group">
               <input id="first_name" name="first_name" type="text" class="app-form-control" placeholder="Prénom">
             </div>
