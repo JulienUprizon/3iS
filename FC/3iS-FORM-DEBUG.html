@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(to right, #ffffff 0%, #fefefe 100%);
+  font-size: 12px;
+}
+
+body, button, input {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+  background: #3e3e3e;
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: #999;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #ffffff;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: #ffffff;
+}
+
+.app-contact {
+  margin-top: auto;
+  font-size: 8px;
+  color: #888;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+  color: #666;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.app-form-button:hover {
+  color: #b9134f;
+}
+
+.credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: #ffa4bd;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.credits-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dribbble {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 520px) {
+  .screen-body {
+    flex-direction: column;
+  }
+
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .app-title {
+    flex-direction: row;
+  }
+
+  .app-title span {
+    margin-right: 12px;
+  }
+
+  .app-title:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .screen-body {
+    padding: 40px;
+  }
+
+  .screen-body-item {
+    padding: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="background">
+  <div class="container">
+  
+  	<p>
+  	Ce formulaire simule la candidature à une formation en alternance<br>
+  	Attentes :<br>
+  	- Création du contact et de la candidature sur la formation en alternance choisie.<br>
+  	</p>
+  
+    <div class="screen">
+      <div class="screen-header">
+        <div class="screen-header-left">
+          <div class="screen-header-button close"></div>
+          <div class="screen-header-button maximize"></div>
+          <div class="screen-header-button minimize"></div>
+        </div>
+        <div class="screen-header-right">
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+          <div class="screen-header-ellipsis"></div>
+        </div>
+      </div>
+      <div class="screen-body">
+        <div class="screen-body-item left">
+          <div class="app-title">
+            <span>3iS / Uprizon</span>
+            <span>TEST<br>CANDIDATURE<br>Alternance</span>
+          </div>
+        </div>
+        <div class="screen-body-item">
+          <div class="app-form">
+          	
+          	<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+          	<input type=hidden name="oid" value="00D7Q000004Rl6n">
+         	 
+			<input type=hidden name="retURL" value="https://3is-executive.fr/remerciement/">
+			<input type=hidden name="techInteretPourCampus__c" value="0017Q00000EdMh4QAF">
+			<input type=hidden name="techCampagnId__c" value="7017Q000000Psz9QAC">
+			<input type=hidden name="tech_InteretJPO__c" value="Formation Continue INSTIC">
+
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!-- -->
+<input type="hidden" name="debug" value=0>
+<input type="hidden" name="debugEmail" value="">
+
+            <div class="app-form-group">
+            	<div class="input-group">
+                <div class="app-form-group">
+<input id="first_name" name="first_name" type="text" class="app-form-control" placeholder="Prénom">
+                </div>
+                <div class="app-form-group">
+<input id="last_name" name="last_name" type="text" class="app-form-control" placeholder="Nom">
+                </div>
+            </div>
+            <div class="app-form-group">
+<input id="email" name="email" type="email" class="app-form-control" placeholder="Email">
+            </div>
+            <div class="app-form-group">
+<input id="mobile" name="mobile" type="text" class="app-form-control" placeholder="Numéro de Téléphone">
+            </div>
+             <div class="app-form-group">
+<input id="ContactFormDescription__c" name="ContactFormDescription__c" type="text" class="app-form-control" placeholder="Message">
+            </div>           <div class="app-form-group">
+            <span class="app-form-control">Acceptation de mise en relation
+ </span><br>
+<input type="checkbox" id="HasOptedInOfEmail__c" name="HasOptedInOfEmail__c" value="true" checked> J'accepte de recevoir les emails de 3iS Executive
+            <span class="app-form-control"></span><br>
+<input type="checkbox" id="HasOptedInOfMobile__c" name="HasOptedInOfMobile__c" value="true" checked> J'accepte d'être recontacté par 3iS Executive
+            </div>
+<div class="app-form-group buttons">
+              <input class="app-form-button" type="submit" name="submit">
+            </div>
+</form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
